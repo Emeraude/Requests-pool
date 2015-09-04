@@ -1,0 +1,24 @@
+{
+  "name": "requests-pool",
+  "version": "1.0.0",
+  "description": "A simple node module to make http requests using a pool.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Emeraude/Request-Pool.git"
+  },
+  "keywords": [
+    "requests-pool",
+    "http",
+    "request"
+  ],
+  "author": "Emeraude",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://gitlab.com/Emeraude/Request-Pool/issues"
+  },
+  "homepage": "https://gitlab.com/Emeraude/Request-Pool#README"
+}
