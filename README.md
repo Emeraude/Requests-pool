@@ -21,7 +21,7 @@ It's using the http.request() node method, so **errors** will be the oerror thro
 ## Documentation
 ### new rp(max)
 
-**max** is the number of maximum simultaneous requests.
+**max** is the number of maximum simultaneous requests. Default value is **100**.
 
 ### rp.max
 
