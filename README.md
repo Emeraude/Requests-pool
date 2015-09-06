@@ -31,6 +31,10 @@ A getter/setter for the number of maximum simultaneous requests.
 
 A getter for the number of current requests.
 
+### rp.waiting
+
+A getter for the number of waiting requests.
+
 ### rp.query(options, data, cb)
 
 **options** is the same argument as passed to http.request() native method.  
