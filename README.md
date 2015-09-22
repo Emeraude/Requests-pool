@@ -39,7 +39,8 @@ A getter for the number of waiting requests.
 
 **options** is the same argument as passed to http.request() native method.  
 **data** is the data sent used in a **POST** request. If not null, the header fields `Content-Type` and `Content-Length` will be automatically filled.  
-**cb** is a callback that take two arguments: the error (or *undefined*) and the **res** object getted by the callback of the http.request() method (or *undefined* if an error occur).
+**cb** is a callback that take two arguments: the error (or *undefined*) and the **res** object getted by the callback of the http.request() method (or *undefined* if an error occur).  
+If you want to use *https*, you need to set `options.protocol` to *'https'*
 
 ### Authors
 
