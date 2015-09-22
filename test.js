@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var Rp = require('./lib');
-var rp = new Rp(1);
-var ids = [1337, 1338];
+var rp = new Rp(2);
+var ids = [1337, 1338, 1339];
 
 for (i in ids) {
   console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
@@ -20,4 +20,16 @@ for (i in ids) {
     console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
   });
   console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
+}
+
+for (i = 0; i < 100; ++i) {
+  console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
+  j = 0;
+  rp.query({host: 'broggit.me', path: '/quote/' + i, port: 3001, method: 'GET'}, function(e, res) {
+    ++j;
+    console.log(j);
+    if (j == 10)
+      rp.end();
+    console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
+  });
 }

@@ -42,6 +42,10 @@ A getter for the number of waiting requests.
 **cb** is a callback that take two arguments: the error (or *undefined*) and the **res** object getted by the callback of the http.request() method (or *undefined* if an error occur).  
 If you want to use *https*, you need to set `options.protocol` to *'https'*
 
+### rp.end()
+
+Remove all the current pending requests and no more can be added.
+
 ### Authors
 
 Emeraude
