@@ -1,6 +1,6 @@
 {
   "name": "requests-pool",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A simple node module to make http requests using a pool.",
   "main": "lib/index.js",
   "scripts": {

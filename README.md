@@ -15,7 +15,7 @@ rp.query(options, datas, function(errors, res) {
 });
 ```
 
-It's using the http.request() node method, so **errors** will be the oerror throwed by this method and **res** the object send to the callback of this object. **options** are the options sent as the first argument of thie method.  
+It's using the http.request() node method, so **errors** will be the error throwed by this method and **res** the object send to the callback of this object. **options** are the options sent as the first argument of thie method.  
 **datas** are the datas you want to send if you are doing a **POST** request.
 
 ## Documentation
