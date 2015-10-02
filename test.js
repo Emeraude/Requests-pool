@@ -28,8 +28,15 @@ for (i = 0; i < 100; ++i) {
   rp.query({host: 'broggit.me', path: '/quote/' + i, port: 3001, method: 'GET'}, function(e, res) {
     ++j;
     console.log(j);
-    if (j == 10)
-      rp.end();
+    if (j == 10) {
+      console.log('alive: ' + rp.alive);
+      rp.exit();
+      console.log('alive: ' + rp.alive);
+    }
     console.log(rp.current + '/' + rp.max + '(' + rp.waiting + ')');
+    if (!rp.alive) {
+      rp.live();
+      console.log('alive: ' + rp.alive);
+    }
   });
 }
