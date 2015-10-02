@@ -35,6 +35,10 @@ A getter for the number of current requests.
 
 A getter for the number of waiting requests.
 
+### rp.alive
+
+A getter to know if the request pool is alive. If *false*, no more requests can be added.
+
 ### rp.query(options[, data], cb)
 
 **options** is the same argument as passed to http.request() native method.  
@@ -42,9 +46,13 @@ A getter for the number of waiting requests.
 **cb** is a callback that take two arguments: the error (or *undefined*) and the **res** object getted by the callback of the http.request() method (or *undefined* if an error occur).  
 If you want to use *https*, you need to set `options.protocol` to *'https'*
 
-### rp.end()
+### rp.exit()
 
 Remove all the current pending requests and no more can be added.
+
+### rp.live()
+
+May be used after `rp.exit` to make the request pool re-usable.
 
 ### Authors
 
