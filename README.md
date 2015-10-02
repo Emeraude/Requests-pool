@@ -39,7 +39,7 @@ A getter for the number of waiting requests.
 
 A getter to know if the request pool is alive. If *false*, no more requests can be added.
 
-### rp.query(options[, data], cb)
+### rp.request(options[, data], cb)
 
 **options** is the same argument as passed to http.request() native method.  
 **data** is the data sent used in a **POST** request. If not null, the header fields `Content-Type` and `Content-Length` will be automatically filled.  
