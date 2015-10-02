@@ -15,7 +15,7 @@ rp.query(options, datas, function(errors, res) {
 });
 ```
 
-It's using the http.request() node method, so **errors** will be the error throwed by this method and **res** the object send to the callback of this object. **options** are the options sent as the first argument of thie method.  
+It's using the http.request() node method, so **errors** will be the error throwed by this method and **res** the object sent to the callback of this object. **options** are the options sent as the first argument of this method.  
 **datas** are the datas you want to send if you are doing a **POST** request.
 
 ## Documentation
@@ -44,7 +44,8 @@ A getter to know if the request pool is alive. If *false*, no more requests can 
 **options** is the same argument as passed to http.request() native method.  
 **data** is the data sent used in a **POST** request. If not null, the header fields `Content-Type` and `Content-Length` will be automatically filled.  
 **cb** is a callback that take two arguments: the error (or *undefined*) and the **res** object getted by the callback of the http.request() method (or *undefined* if an error occur).  
-If you want to use *https*, you need to set `options.protocol` to *'https'*
+If you want to use *https*, you need to set `options.protocol` to *'https'*.  
+You can set `options.retry` to **true** if you want to relaunch the request if it fails.
 
 ### rp.exit()
 
